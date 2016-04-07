@@ -4,9 +4,11 @@ gulp.task('css', function() {
   var postcss = require('gulp-postcss');
   var sourcemaps = require('gulp-sourcemaps');
   var autoprefixer = require('autoprefixer');
+  var cssnano = require('cssnano');
 
   var processors = [
-    autoprefixer
+    autoprefixer,
+    cssnano
   ];
 
   return gulp.src('src/**/*.css')
